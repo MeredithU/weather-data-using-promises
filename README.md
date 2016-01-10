@@ -15,7 +15,7 @@ This app calls an API and creates a Promise each time. Each Promise is stored in
 
 ### Installation Instructions
 
-1. git clone ``https://github.com/MeredithU/weather-data-using-promises.git``
+1. ``git clone https://github.com/MeredithU/weather-data-using-promises.git``
 2. ``cd weather-data-using-promises``
 3. ``npm install``
 4. ``gulp`` (This assumes you have NPM & Gulp installed globally)
