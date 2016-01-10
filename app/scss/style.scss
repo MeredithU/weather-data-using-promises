@@ -1,0 +1,65 @@
+$font-stack: OpenSans, sans serif;
+$blue: #007ee5;
+$light-gray: #cecece;
+$dark-gray: #3d464d;
+
+body {
+  font-family: $font-stack;
+}
+  
+header {
+  top: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #cecece;
+  width: 100%;
+  text-align: center;
+  
+  h1 {
+    font-size: 28px;
+  }
+}
+
+ul,
+li {
+  list-style: none;
+  border-radius: 4px;
+}
+
+.weather-cards {
+   li {
+    box-sizing: border-box;
+    float: left;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid $light-gray;
+    text-align: center;
+    margin: 50px 40px 0 0;
+     
+    h2 {
+      font-size: 24px;
+      color: $blue;
+      font-weight: 200;
+    }
+     
+    img {
+      vertical-align: middle;
+    }
+     
+    .temp {
+      font-size: 36px;
+      color: $dark-gray;
+      margin: 40px 0;
+    }
+     
+    .weather {
+      font-size: 18px;
+      color: $dark-gray;
+    }
+     
+    .wind {
+      font-size: 18px;
+      color: $dark-gray;
+      margin: 20px 0 10px 0;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+body {
+  font-family: OpenSans, sans serif; }
+
+header {
+  top: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid #cecece;
+  width: 100%;
+  text-align: center; }
+  header h1 {
+    font-size: 28px; }
+
+ul,
+li {
+  list-style: none;
+  border-radius: 4px; }
+
+.weather-cards li {
+  box-sizing: border-box;
+  float: left;
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #cecece;
+  text-align: center;
+  margin: 50px 40px 0 0; }
+  .weather-cards li h2 {
+    font-size: 24px;
+    color: #007ee5;
+    font-weight: 200; }
+  .weather-cards li img {
+    vertical-align: middle; }
+  .weather-cards li .temp {
+    font-size: 36px;
+    color: #3d464d;
+    margin: 40px 0; }
+  .weather-cards li .weather {
+    font-size: 18px;
+    color: #3d464d; }
+  .weather-cards li .wind {
+    font-size: 18px;
+    color: #3d464d;
+    margin: 20px 0 10px 0; }

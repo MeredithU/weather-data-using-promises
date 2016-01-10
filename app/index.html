@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <title>Weather Data Using Promises</title>
+
+    <!-- Styling -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <!-- Handlebars -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.min.js"></script>
+
+    <!-- Local JS File -->
+    <script src="js/weather.js"></script>
+  </head>
+    
+  <body>
+    <header>
+      <h1>Weather of Five US Cities</h1>
+    </header>
+
+    <section class="weather">
+      <ul class="weather-cards">
+        <script id="weather-template" type="text/x-handlebars-template">
+          {{#each cities}}
+            <li>
+              <h2>{{city}}</h2>
+              <div>
+                <p class="temp">{{{temp}}}</p>
+                <p>
+                  <span><img src="{{icon}}"></span>
+                  <span class="weather">{{weather}}</span>
+                </p>
+                <p class="wind">{{wind}}</p>
+              </div>
+            </li>
+          {{/each}}
+        </script>
+      </ul>
+    </section>
+  </body>
+
+</html>
