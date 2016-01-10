@@ -18,7 +18,7 @@ This app calls an API and creates a Promise each time. Each Promise is stored in
 1. ``git clone https://github.com/MeredithU/weather-data-using-promises.git``
 2. ``cd weather-data-using-promises``
 3. ``npm install``
-4. ``gulp`` (This assumes you have NPM & Gulp installed globally)
+4. ``gulp`` (This assumes you have npm & Gulp installed globally)
 5.  To open a browser window with live-reloading, run ``gulp watch``
 
 ### Next Steps
