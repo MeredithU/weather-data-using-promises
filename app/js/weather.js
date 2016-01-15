@@ -11,9 +11,14 @@ var usWeather = {
     "Chicago",
     "New_York_City"
   ],
-  
-  // Map through each city calling the api, collect each promise and store in an array
-  // Use Promise.all to create an object with the necessary data and then render onto the page
+
+  /*
+   * Call the weather API when mapping through each city. Each city returns a promise.
+   * Store each promise into an array.
+   * When all promises resolves, create an object with specific weather data.
+   * Render object onto the page.
+  */
+ 
   init : function () {
     var cityData = usWeather.cities.map(usWeather.apiCall);
      
@@ -30,7 +35,12 @@ var usWeather = {
       });
   },
   
-  // Create a new promise each time the API is called. End result is returning the promise
+  /*
+   * Call weather API. Returns a Promise.
+   * Resolves to an array of weather data.
+   *
+  */
+
   apiCall : function (city) {
 
     var promise = new Promise (function (resolve, reject) {
@@ -68,15 +78,15 @@ var usWeather = {
     return "http://openweathermap.org/img/w/" + icon + ".png";
   },
   
-  // Create an object with only the weather data needed to render onto the page.
+  // Create weather data object. Returns the object to render.
   getSpecificCityWeatherData : function (data) {
     var weatherData = {};
     
-    weatherData.city = data.name;
-    weatherData.temp = usWeather.convertKtoF(data.main.temp);
-    weatherData.weather = data.weather[0].main;
-    weatherData.wind = usWeather.fromMPStoMPH(data.wind.speed);
-    weatherData.icon = usWeather.getIconURL(data.weather[0].icon);
+    weatherData.city = data.name || "";
+    weatherData.temp = usWeather.convertKtoF(data.main.temp) || "";
+    weatherData.weather = data.weather[0].main || "";
+    weatherData.wind = usWeather.fromMPStoMPH(data.wind.speed) || "";
+    weatherData.icon = usWeather.getIconURL(data.weather[0].icon) || "";
     
     return weatherData;
   },
@@ -91,4 +101,4 @@ var usWeather = {
   
 };
 
-$(usWeather.init);
+document.addEventListener("DOMContentLoaded", usWeather.init);
