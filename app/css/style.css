@@ -1,3 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 body {
   font-family: OpenSans, sans serif; }
 
@@ -32,7 +39,7 @@ li {
   .weather-cards li .temp {
     font-size: 36px;
     color: #3d464d;
-    margin: 40px 0; }
+    margin: 20px 0; }
   .weather-cards li .weather {
     font-size: 18px;
     color: #3d464d; }

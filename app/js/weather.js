@@ -91,4 +91,4 @@ var usWeather = {
   
 };
 
-$(document).ready(usWeather.init);
+$(usWeather.init);
