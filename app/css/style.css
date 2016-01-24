@@ -22,28 +22,63 @@ li {
   list-style: none;
   border-radius: 4px; }
 
-.weather-cards li {
-  box-sizing: border-box;
-  float: left;
-  padding: 10px;
-  width: 200px;
-  border: 1px solid #cecece;
-  text-align: center;
-  margin: 50px 40px 0 0; }
-  .weather-cards li h2 {
+ul.weather-cards {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0; }
+  ul.weather-cards::after {
+    clear: both;
+    content: "";
+    display: table; }
+  ul.weather-cards li.block {
+    border: 1px solid #cecece;
+    text-align: center;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    margin-top: 20px; }
+    ul.weather-cards li.block:last-child {
+      margin-right: 0; }
+    ul.weather-cards li.block:nth-child(4n) {
+      margin-right: 0; }
+    ul.weather-cards li.block:nth-child(4n+1) {
+      clear: left; }
+    @media screen and (max-width: 401px) {
+      ul.weather-cards li.block {
+        float: left;
+        display: block;
+        margin-right: 16.03631%;
+        width: 100%; }
+        ul.weather-cards li.block:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 750px) {
+      ul.weather-cards li.block {
+        float: left;
+        display: block;
+        margin-right: 7.42297%;
+        width: 46.28851%; }
+        ul.weather-cards li.block:last-child {
+          margin-right: 0; }
+        ul.weather-cards li.block:nth-child(2n) {
+          margin-right: 0; }
+        ul.weather-cards li.block:nth-child(2n+1) {
+          clear: left; } }
+  ul.weather-cards li h2 {
     font-size: 24px;
     color: #007ee5;
     font-weight: 200; }
-  .weather-cards li img {
+  ul.weather-cards li img {
     vertical-align: middle; }
-  .weather-cards li .temp {
+  ul.weather-cards li .temp {
     font-size: 36px;
     color: #3d464d;
     margin: 20px 0; }
-  .weather-cards li .weather {
+  ul.weather-cards li .weather {
     font-size: 18px;
     color: #3d464d; }
-  .weather-cards li .wind {
+  ul.weather-cards li .wind {
     font-size: 18px;
     color: #3d464d;
-    margin: 20px 0 10px 0; }
+    margin: 20px 0 10px; }

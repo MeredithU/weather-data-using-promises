@@ -27,9 +27,9 @@ var usWeather = {
         var cityData = {
           cities : []
         } ;
-        cityData.cities = value.map(usWeather.getSpecificCityWeatherData);
-        usWeather.render(cityData);
-      })
+        cityData.cities = value.map(this.getSpecificCityWeatherData);
+        this.render(cityData);
+      }.bind(usWeather))
       .catch(function() {
         console.log("An error has occurred in retrieving the data from the API call.")
       });

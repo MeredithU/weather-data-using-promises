@@ -31,15 +31,28 @@ li {
   border-radius: 4px;
 }
 
-.weather-cards {
+ul.weather-cards {
+  @include outer-container;
+  @include padding(0);
+
    li {
-    box-sizing: border-box;
-    float: left;
-    padding: 10px;
-    width: 200px;
-    border: 1px solid $light-gray;
-    text-align: center;
-    margin: 50px 40px 0 0;
+    &.block {
+      border: 1px solid $light-gray;
+      text-align: center;
+
+      @include span-columns(3);
+      @include omega(4n);
+      @include margin(20px null null null);
+
+      @include media($tiny) {
+        @include span-columns(2);
+      }
+
+      @include media($mobile) {
+        @include span-columns(2);
+        @include omega(2n);
+      }
+    }
      
     h2 {
       font-size: 24px;
@@ -65,7 +78,8 @@ li {
     .wind {
       font-size: 18px;
       color: $dark-gray;
-      margin: 20px 0 10px 0;
+
+      @include margin(20px 0 10px 0);
     }
   }
 }

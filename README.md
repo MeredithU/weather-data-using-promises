@@ -28,3 +28,4 @@ This app calls an API and creates a Promise each time. Each Promise is stored in
 1. Refactor refactor refactor
 2. ~~Integrate Bourbon & Neat for styling~~
 3. Use Handlebars through npm
+4. Use Bourbon & Neat for my styling
